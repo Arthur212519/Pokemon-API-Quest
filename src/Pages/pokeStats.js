@@ -1,8 +1,8 @@
 import { PokemonStats } from '../components/pokemonStats'
 
-const StatsScreen =()=>{
+const PokemonDetails =()=>{
     return(
         <PokemonStats />
     )
 }
-export { StatsScreen }
+export { PokemonDetails }

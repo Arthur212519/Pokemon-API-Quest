@@ -1,31 +1,45 @@
 import styled from "styled-components";
+import "../pokeCard/pokeCard.css"
+import { getColor } from "../services";
 import React from "react"
+import { Link } from "react-router-dom";
+
 const PokeCard = (props) => {
-   const {pokemon} = props
-   console.log(props) 
+    const { pokemon } = props
+   
+   const fetchColor=async ()=>{
+    const data = await getColor(pokemon.id)
+   }
+   
    
     return (
-        <Div>
-            
-            <h1>{pokemon.name}</h1>
+        <Link to={`/pokemonStats/${pokemon.id}`} className="link">
+            <Div>
+                <span>#{pokemon.id}</span>
+                <Img src={pokemon.sprites.other["official-artwork"].front_default} alt={pokemon.name}></Img>
+                <h1>{pokemon.name}</h1>
 
-        </Div>
+            </Div>
+        </Link>
     )
 }
+
 const Div = styled.div`
-    font-family: 'Common Pixel', sans-serif;
+    font-family: 'PixelGameFont', sans-serif;
+    padding:10px;
     border: none;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    font-size: 11px;
+    font-size: 15px;
     border-radius: 15px;
-    background-color:#202020;
-    max-width: 200px;
-    min-height:200px;
+    width: 200px;
+    height:200px;
     color: white;
-
+`
+const Img = styled.img`
+max-width:50%;
 `
 
 export { PokeCard } 

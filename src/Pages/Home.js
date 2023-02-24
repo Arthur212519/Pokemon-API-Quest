@@ -1,11 +1,15 @@
-import { PokeCard } from "../components/pokeCard"
 import { NavBar } from "../components/navBar"
+import styled from "styled-components"
+import { PokeList } from "../components/PokeList"
 const Home = () => {
     return (
-        <div>
+        <Div>
             <NavBar />
-            <PokeCard />
-        </div>
+            <PokeList />
+        </Div>
     )
 }
+const Div =styled.div`
+background-color:#ebedeb`
+
 export { Home }

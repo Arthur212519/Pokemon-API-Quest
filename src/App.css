@@ -6,7 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+@font-face {
+  font-family: 'PixelGameFont';
+  src: local('PixelGameFont'), url(./fonts/PixelGameFont.ttf) format('truetype');
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
