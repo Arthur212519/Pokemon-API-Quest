@@ -3,6 +3,7 @@ import { Home } from './Home'
 import { PokemonDetails } from './pokeStats'
 const AppRouter = () => {
     return (
+        
         <BrowserRouter>
             <Routes>
                 <Route exact path='/' element={<Home />} />

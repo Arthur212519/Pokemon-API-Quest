@@ -1,13 +1,50 @@
+import styled from "styled-components"
 const PokemonInfo = (props) => {
     const { pokemon } = props
-    console.log(pokemon)
+    console.log(pokemon.types)
     return (
-        <>
+
+        <Div>
             <div>
-                <img src={ `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} />
-                <h2>{pokemon.name}</h2>
+                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} />
             </div>
-        </>
+            <Box>
+                <h2>Name:{pokemon.name}</h2>
+                <h2>Base experience:{pokemon.base_experience}xp</h2>
+                <Type>
+                    <h2>Type(s):</h2>
+                    <Span>{
+                        pokemon.types?.map((type, index) => {
+                            if (pokemon.types.length - 1 === index) {
+                                return (<Span key={index}> {type.type.name}</Span>)
+                            } else {
+                                return (<Span key={index}> {type.type.name} and</Span>)
+                            }
+                        })}</Span>
+                </Type>
+            </Box>
+
+
+
+        </Div>
+
     )
 }
+const Span = styled.span`
+font-size:30px;`
+const Type = styled.div`
+display:flex;
+`
+const Div = styled.div`
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-around;
+font-size:20px;
+font-family: 'PixelGameFont', sans-serif;`
+const Box = styled.div`
+display:flex;
+gap:20px;
+flex-direction:column;
+`
 export { PokemonInfo }

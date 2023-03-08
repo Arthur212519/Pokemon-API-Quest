@@ -2,12 +2,16 @@
 import './App.css';
 import { createGlobalStyle } from 'styled-components'
 import { AppRouter } from './Pages/routes';
+import { ThemeProvider } from './components/Context';
 
 function App() {
   return (
     <>
-    <GlobalStyle/>
+   <ThemeProvider>
+   <GlobalStyle/>
   <AppRouter />
+   </ThemeProvider>
+  
   </>
   )
 }

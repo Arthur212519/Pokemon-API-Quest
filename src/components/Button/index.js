@@ -1,7 +1,12 @@
+import React,{ useContext } from "react"
 import styled from "styled-components"
+import { ThemeContext } from "../Context"
 const ButtonDefault =(props)=>{
+    const {theme} = useContext(ThemeContext)
     return(
-        <Button  {...props}></Button>
+        <Button  {...props}
+        style={{color:theme.color,backgroundColor:theme.buttoncolor}}>
+        </Button>
     )
 }
 const Button = styled.button`
@@ -12,6 +17,7 @@ color:#ebedeb;
 cursor:pointer;
 border-radius:20px;
 border:none;
-background-color:#F33333;
+box-shadow:  0 5px 10px rgba(15,15,15,0.25);
+background-color:rgb(109, 9,155);
 `
 export { ButtonDefault }

@@ -1,20 +1,16 @@
 import styled from "styled-components";
 import "../pokeCard/pokeCard.css"
-import { getColor } from "../services";
+import { useContext } from "react";
+import { ThemeContext } from "../Context"
 import React from "react"
 import { Link } from "react-router-dom";
 
 const PokeCard = (props) => {
+    const {theme} = useContext(ThemeContext)
     const { pokemon } = props
-   
-   const fetchColor=async ()=>{
-    const data = await getColor(pokemon.id)
-   }
-   
-   
     return (
         <Link to={`/pokemonStats/${pokemon.id}`} className="link">
-            <Div>
+            <Div style={{backgroundColor:theme.card}}>
                 <span>#{pokemon.id}</span>
                 <Img src={pokemon.sprites.other["official-artwork"].front_default} alt={pokemon.name}></Img>
                 <h1>{pokemon.name}</h1>
@@ -22,6 +18,9 @@ const PokeCard = (props) => {
             </Div>
         </Link>
     )
+
+
+
 }
 
 const Div = styled.div`
@@ -36,7 +35,7 @@ const Div = styled.div`
     border-radius: 15px;
     width: 200px;
     height:200px;
-    color: white;
+    color:white;
 `
 const Img = styled.img`
 max-width:50%;

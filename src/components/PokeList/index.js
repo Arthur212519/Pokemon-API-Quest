@@ -1,10 +1,14 @@
 import { getPokemons, getData, } from "../services";
-import React, { useEffect, useState } from "react"
+import { ThemeContext } from "../Context";
+import { ThemeTogglerButton } from "../theme-toggler-buttom"
+import React, { useContext, useEffect, useState } from "react"
 import { PokeCard } from "../pokeCard";
+import Logo from "../navBar/images/pokemon-logo.png"
 import styled from "styled-components";
 import { ButtonDefault } from "../Button";
 
 const PokeList = () => {
+    const { theme } = useContext(ThemeContext)
     const [pokemons, setPokemons] = useState([])
     const [limit, setLimit] = useState(10)
 
@@ -25,7 +29,9 @@ const PokeList = () => {
     }, [limit])
 
     return (
-        <Section>
+        <Section style={{ backgroundColor: theme.background }}>
+            <Img src={Logo} />
+            <ThemeTogglerButton />
             <Div>
                 {pokemons.map((pokemon, index) => {
                     return (
@@ -35,18 +41,23 @@ const PokeList = () => {
                     )
                 })}
             </Div>
-            <div>
-                <ButtonDefault onClick={onClickHandler}>Load more</ButtonDefault>
-            </div>
-
+            <ButtonDefault onClick={onClickHandler}>Load more</ButtonDefault>
         </Section>
     )
 
 }
+const ButtonBox = styled.div`
+display:flex;
+`
 const Section = styled.section`
 display:flex;
 flex-direction:column;
 align-items:center;
+height:100%;
+gap:20px;
+padding:20px;
+
+);
 `
 const Div = styled.div`
 display:flex;
@@ -56,4 +67,6 @@ align-items:center;
 gap:10px;
 flex-wrap:wrap;
 `
+const Img = styled.img`
+width:40%;`
 export { PokeList }

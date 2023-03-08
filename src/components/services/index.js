@@ -13,16 +13,12 @@ const getData = async (url) => {
       return await response.json() 
 }
 const getType = async (id) =>{
-    const response = await fetch(`https://pokeapi.co/api/v2/type/`)
+    const response = await fetch(`https://pokeapi.co/api/v2/type/${id}`)
     return await response.json()
 }
 const getAbilities =async (id)=>{
-    const response =await fetch(`https://pokeapi.co/api/v2/`)
+    const response =await fetch(` https://pokeapi.co/api/v2/ability/${id}/`)
     return await response.json()
 }
- const getColor =async (id)=>{
-    const response =await fetch(`https://pokeapi.co/api/v2/pokemon-color/${id}/`)
-    return await response.json()
- }
-
-export {getPokemons,getPokemon,getData,getType,getAbilities,getColor}
+ 
+export {getPokemons,getPokemon,getData,getType,getAbilities,}
