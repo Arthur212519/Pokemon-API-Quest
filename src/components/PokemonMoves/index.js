@@ -33,13 +33,14 @@ const PokemonMoves = (props) => {
 
 }
 const Div = styled.div`
+margin-top:20px;
 font-family: 'PixelGameFont', sans-serif;
 font-size:20px;
 display:flex;
 color:white;
 flex-direction:column;
 align-items:center;
-gap:5px;
+gap:10px;
 `
 const Box =styled.span`
 display:flex;

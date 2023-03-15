@@ -1,7 +1,6 @@
 import styled from "styled-components"
 const PokemonInfo = (props) => {
     const { pokemon } = props
-    console.log(pokemon.types)
     return (
 
         <Div>
@@ -38,6 +37,7 @@ display:flex;
 const Div = styled.div`
 color:white;
 display:flex;
+flex-direction:column;
 align-items:center;
 justify-content:space-around;
 font-size:20px;

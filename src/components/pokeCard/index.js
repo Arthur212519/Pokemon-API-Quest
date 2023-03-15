@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 const PokeCard = (props) => {
     const {theme} = useContext(ThemeContext)
     const { pokemon } = props
+    
     return (
         <Link to={`/pokemonStats/${pokemon.id}`} className="link">
             <Div style={{backgroundColor:theme.card}}>
-                <span>#{pokemon.id}</span>
                 <Img src={pokemon.sprites.other["official-artwork"].front_default} alt={pokemon.name}></Img>
                 <h1>{pokemon.name}</h1>
 

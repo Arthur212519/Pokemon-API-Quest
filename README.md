@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# introdução
+Este é o último projeto de devcast,uma pokédex que utiliza dados de uma api para  apresentar uma lista de pokémons com suas habilidades,movimentos e características únicas.
+## Tecnologias usadas
+* React.js
+* Context API
+* React Router Dom
+* Styled-components
+## Desenvolvimento do projeto
+Este foi de longe o projeto mais desafiador que eu já fiz,no início, tive muita dificuldade em descobrir por onde começar,então tomei a liberdade de pesquisar outros projetos semelhantes para que  em tivesse uma ideia base.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Quero deixar aqui meus agradecimentos aos meus colegas de turma que terminaram o projeto antes de mim,aprendi muita coisa lendo os códigos que vocês criaram,sinto que esse projeto foi um divisor de águas na minha carreira e percebi que ainda tenho um longo caminho pela frente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Algumas das requisições feitas eu não pude concluir como por exemplo o seletor que filtrar os pokémons pelo tipo deles.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Como rodar o projeto no seu computador
+### aplicativos necessários
+* vs code
+* node.js
+* gitbash
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1- Vá até o repositório onde está o projeto, clique em code e depois copie o link https.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="./readme-images/github-clone.png" width="450" title="git clone">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2- Depois crie uma pasta em seu computador,abra ela com o gitbash e digite o código abaixo colocando o link https no final.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+    *  git clone https://github.com/Arthur212519/Pokemon-API-Quest.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3-Depois de clonar o projeto,abra ele com o vs code,digite o comando shift + Ctrl+ ' ou vá na aba terminal para abrir o terminal de comando,Após isso será necessário instalar as bibliotecas utilizadas no projeto usando o seguinte comando.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    *  npm         install
 
-### Analyzing the Bundle Size
+<img src="./readme-images/npm-install.png" width="450" title="git clone">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4- Quando terminar de instalar, escreva o comando npm start  no terminal para iniciar o projeto e divirta-se

@@ -27,11 +27,10 @@ const PokeList = () => {
     useEffect(() => {
         fetchPokemons()
     }, [limit])
-
     return (
         <Section style={{ backgroundColor: theme.background }}>
             <Img src={Logo} />
-            <ThemeTogglerButton />
+            <ThemeTogglerButton /> 
             <Div>
                 {pokemons.map((pokemon, index) => {
                     return (
@@ -46,9 +45,6 @@ const PokeList = () => {
     )
 
 }
-const ButtonBox = styled.div`
-display:flex;
-`
 const Section = styled.section`
 display:flex;
 flex-direction:column;
